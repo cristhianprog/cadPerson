@@ -1,0 +1,27 @@
+<mat-toolbar>
+    <div fxHide.gt-xs>
+        <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <div>
+        <a routerLink="/">People Management</a>
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="30px" class="navigation-items">
+            <li matTooltip="Go to List">
+                <a routerLink="/list" class="d-flex align-items-center">
+                    <mat-icon>list</mat-icon>
+                    <span class="nav-caption">List</span>
+                </a>
+            </li>
+            <li matTooltip="Go to Register">
+                <a routerLink="/register" class="d-flex align-items-center">
+                    <mat-icon>assignment_ind</mat-icon>
+                    <span class="nav-caption">Register</span>
+                </a>            
+            </li>
+        </ul>
+    </div>
+</mat-toolbar>
+<ngx-loading-bar [height]="'5px'" [includeSpinner]="false" ></ngx-loading-bar>
